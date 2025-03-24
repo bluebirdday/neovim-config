@@ -12,6 +12,12 @@ Clone the repo
 git clone git@github.com:bluebirdday/neovim-config.git ~/.config/nvim
 ```
 
+First time start will generate an error because of Packer missing modules, install these modules:
+```
+:PackerInstall
+```
+Quit and restart neovim
+
 ## What does this do?
 
 - Uses Packer package manger as lazy does require neovim >= 0.8 and Hypernode has 0.7 installed.
