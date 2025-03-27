@@ -1,6 +1,8 @@
 require("plugins")
 
 vim.cmd[[colorscheme nord]]
+vim.cmd[[set mouse=a]]
+vim.cmd[[set noshowmode]]
 
 vim.o.incsearch = true
 vim.o.hlsearch = true
