@@ -1,5 +1,10 @@
 # neovim configuration for Bluebird Day servers
 
+## Requirements
+neovim >= 0.7
+Not all Hypernodes have the same neovim version, this can be checked with:
+```nvim --version```
+
 ## Installation
 Install packer:
 
