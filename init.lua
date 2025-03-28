@@ -1,7 +1,6 @@
 require("plugins")
 
 vim.cmd[[colorscheme onenord]]
-vim.cmd[[set mouse=a]]
 vim.cmd[[set noshowmode]]
 
 vim.o.incsearch = true
