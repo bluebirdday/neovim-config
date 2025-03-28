@@ -1,6 +1,6 @@
 require("plugins")
 
-vim.cmd[[colorscheme nord]]
+vim.cmd[[colorscheme onenord]]
 vim.cmd[[set mouse=a]]
 vim.cmd[[set noshowmode]]
 
