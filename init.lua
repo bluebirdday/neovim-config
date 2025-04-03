@@ -31,6 +31,9 @@ vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 -- Open the explorer
 vim.keymap.set('n', '<leader>e', ':Explore<CR>')
 
+-- move line one up
+vim.keymap.set('n', '<leader>j', ':m +1<CR>')
+vim.keymap.set('n', '<leader>k', ':m -2<CR>')
 
 vim.keymap.set('n', 'dd', '"_dd')
 vim.keymap.set('n', 'x', '"_x')
