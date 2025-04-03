@@ -28,6 +28,9 @@ vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 vim.opt.list = true
 vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 
+-- Open the explorer
+vim.keymap.set('n', '<leader>e', ':Explore<CR>')
+
 
 vim.keymap.set('n', 'dd', '"_dd')
 vim.keymap.set('n', 'x', '"_x')
