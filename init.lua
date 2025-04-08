@@ -75,3 +75,15 @@ vim.api.nvim_create_autocmd('TextYankPost', {
     vim.highlight.on_yank()
   end,
 })
+
+vim.keymap.set('n', '<leader>sln', function()
+   print('Showing line numbers')
+   vim.o.number = true
+   vim.o.relativenumber = true
+ end, {desc= 'Show line numbers'})
+
+ vim.keymap.set('n', '<leader>hln', function()
+   print('Hiding line numbers')
+   vim.o.number = false
+   vim.o.relativenumber = false
+end, {desc= 'Hide line numbers'})
