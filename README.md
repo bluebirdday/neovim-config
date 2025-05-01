@@ -7,7 +7,11 @@ Not all Hypernodes have the same neovim version, this can be checked with:
 
 ## Installation
 
-### Hypernode
+### Update neovim on Hypernode
+If you are using a Hypernode, you can update neovim with the following commands:
+
+! This only works on Debian Bookwork Hypernodes. Debian Buster Hypernodes can be upgraded via Hypernode support.
+
 Download latest neovim and symlink to the binary
 ```shell
 mkdir -p ~/bin
