@@ -19,7 +19,12 @@ return {
             local config = require('mason-lspconfig')
 
             config.setup({
-                ensure_installed = { 'lua_ls', 'eslint', 'phpactor' }
+                ensure_installed = {
+                    'lua_ls',
+                    'eslint-lsp',
+                    'phpactor',
+                    'bash-language-server',
+                }
             })
 
             config.setup_handlers({ function(server_name)
