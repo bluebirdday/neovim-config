@@ -21,9 +21,9 @@ return {
             config.setup({
                 ensure_installed = {
                     'lua_ls',
-                    'eslint-lsp',
+                    'eslint',
                     'phpactor',
-                    'bash-language-server',
+                    'bashls',
                 }
             })
 
