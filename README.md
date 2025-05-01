@@ -6,6 +6,17 @@ Not all Hypernodes have the same neovim version, this can be checked with:
 ```nvim --version```
 
 ## Installation
+
+### Hypernode
+Download latest neovim and symlink to the binary
+```shell
+mkdir -p ~/bin
+wget https://github.com/neovim/neovim/releases/download/v0.11.0/nvim-linux-x86_64.tar.gz
+tar xzvf nvim-linux-x86_64.tar.gz
+ln -s /data/web/bin/nvim-linux-x86_64/bin/nvim /data/web/.local/bin/nvim
+```
+
+
 Install packer:
 
 ```
