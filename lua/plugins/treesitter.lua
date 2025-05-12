@@ -16,7 +16,8 @@ return {
         "php",
         "bash",
         "markdown",
-        "toml"
+        "toml",
+        "nginx"
       },
     },
   },

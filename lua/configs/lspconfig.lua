@@ -8,9 +8,3 @@ vim.lsp.enable(servers)
 -- read :h vim.lsp.config for changing options of lsp servers
 
 lspconfig.phpactor.setup {}
-
-local test = {
-  "bla",
-}
-
--- print(test[1])
