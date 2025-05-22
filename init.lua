@@ -55,3 +55,10 @@ vim.api.nvim_set_option("clipboard", "unnamedplus")
 vim.keymap.set('n', 'dd', '"_dd')
 vim.keymap.set('n', 'x', '"_x')
 vim.keymap.set('n', 'd', '"_d')
+
+-- move line one down
+vim.keymap.set('n', '<leader><Down>', ':m +1<CR>')
+vim.keymap.set('n', '<leader>j', ':m +1<CR>')
+-- move line up
+vim.keymap.set('n', '<leader><Up>', ':m -2<CR>')
+vim.keymap.set('n', '<leader>k', ':m -2<CR>')
