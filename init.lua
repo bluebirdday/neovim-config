@@ -50,7 +50,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 vim.keymap.set('n', 'n', 'nzzzv', opts)
 vim.keymap.set('n', 'N', 'Nzzzv', opts)
 
---vim.api.nvim_set_option("clipboard", "unnamedplus")
+vim.api.nvim_set_option("clipboard", "unnamedplus")
 -- Dont copy to clipboard on delete
 vim.keymap.set('n', 'dd', '"_dd')
 vim.keymap.set('n', 'x', '"_x')
