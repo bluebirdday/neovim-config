@@ -3,6 +3,13 @@
 ## Requirements
 neovim >=0.11, this can be checked with: `nvim --version`
 
+## Installation
+Just clone the repo
+```
+git clone git@github.com:bluebirdday/neovim-config.git ~/.config/nvim
+```
+and start neovim with `nvim`
+
 ## Install neovim
 
 ### Ubuntu manually
@@ -28,10 +35,6 @@ mkdir -p /data/web/.local/bin
 ln -s /data/web/bin/nvim-linux-x86_64/bin/nvim /data/web/.local/bin/nvim
 ```
 
-Clone the repo
-```
-git clone git@github.com:bluebirdday/neovim-config.git ~/.config/nvim
-```
 
 ## What does this do?
 
