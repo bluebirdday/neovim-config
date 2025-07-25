@@ -36,29 +36,3 @@ vim.schedule(function()
   require "mappings"
 end)
 
--- Custom mappings
-
-vim.api.nvim_create_autocmd('TextYankPost', {
-  desc = 'Highlight when yanking (copying) text',
-  group = vim.api.nvim_create_augroup('kickstart-highlight-yank', { clear = true }),
-  callback = function()
-    vim.highlight.on_yank()
-  end,
-})
-
--- find and center
-vim.keymap.set('n', 'n', 'nzzzv', opts)
-vim.keymap.set('n', 'N', 'Nzzzv', opts)
-
-vim.api.nvim_set_option("clipboard", "unnamedplus")
--- Dont copy to clipboard on delete
-vim.keymap.set('n', 'dd', '"_dd')
-vim.keymap.set('n', 'x', '"_x')
-vim.keymap.set('n', 'd', '"_d')
-
--- move line one down
-vim.keymap.set('n', '<leader><Down>', ':m +1<CR>')
-vim.keymap.set('n', '<leader>j', ':m +1<CR>')
--- move line up
-vim.keymap.set('n', '<leader><Up>', ':m -2<CR>')
-vim.keymap.set('n', '<leader>k', ':m -2<CR>')
