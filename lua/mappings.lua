@@ -35,7 +35,11 @@ map('n', '<C-u>', '<C-u>zz')
 map('n', '<C-,>', ':vertical resize +3<CR>')
 map('n', '<C-.>', ':vertical resize -3<CR>')
 
--- Custom mappings
+-- Move 1 up and down in visual mode for selected lines
+map('v', '<S-Up>', ':m -2<CR>gv=gv')
+map('v', '<S-Down>', ":m '>+1<CR>gv=gv'")
+
+-- Highlight text on yank 
 vim.api.nvim_create_autocmd('TextYankPost', {
   desc = 'Highlight when yanking (copying) text',
   group = vim.api.nvim_create_augroup('kickstart-highlight-yank', { clear = true }),
