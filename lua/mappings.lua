@@ -48,4 +48,14 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
-
+-- Only set this up if we're in a tmux session
+if os.getenv("TMUX") then
+  vim.keymap.del("n", "<C-h>")
+  vim.keymap.del("n", "<C-j>")
+  vim.keymap.del("n", "<C-k>")
+  vim.keymap.del("n", "<C-l>")
+  vim.keymap.set("n", "<C-h>", "<cmd>TmuxNavigateLeft<cr>")
+  vim.keymap.set("n", "<C-j>", "<cmd>TmuxNavigateDown<cr>")
+  vim.keymap.set("n", "<C-k>", "<cmd>TmuxNavigateUp<cr>")
+  vim.keymap.set("n", "<C-l>", "<cmd>TmuxNavigateRight<cr>")
+end
