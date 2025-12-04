@@ -18,6 +18,9 @@ vim.api.nvim_set_option("clipboard", "unnamedplus")
 map('n', 'dd', '"_dd')
 map('n', 'x', '"_x')
 map('n', 'd', '"_d')
+map('n', 'c', '"_c')
+map('n', 'diw', '"_diw')
+map('n', 'ciw', '"_ciw')
 
 -- move line one down
 map('n', '<leader><Down>', ':m +1<CR>', { desc = 'Move line one down'})
