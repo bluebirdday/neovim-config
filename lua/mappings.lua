@@ -14,13 +14,16 @@ map('n', 'n', 'nzzzv', opts)
 map('n', 'N', 'Nzzzv', opts)
 
 vim.api.nvim_set_option("clipboard", "unnamedplus")
--- Dont copy to clipboard on delete
+-- Dont copy to clipboard on delete in normal mode
 map('n', 'dd', '"_dd')
 map('n', 'x', '"_x')
 map('n', 'd', '"_d')
 map('n', 'c', '"_c')
 map('n', 'diw', '"_diw')
 map('n', 'ciw', '"_ciw')
+
+-- Toggle word wrap
+map('n', '<leader>lw', '<cmd>set wrap!<CR>')
 
 -- move line one down
 map('n', '<leader><Down>', ':m +1<CR>', { desc = 'Move line one down'})
@@ -50,6 +53,13 @@ vim.api.nvim_create_autocmd('TextYankPost', {
     vim.highlight.on_yank()
   end,
 })
+
+vim.keymap.set('n', '<leader>ln', function()
+   print('Toggle line numbers')
+  vim.api.nvim_command('set number!')
+  vim.api.nvim_command('set relativenumber!')
+ end, {desc= 'Show line numbers'})
+
 
 -- Only set this up if we're in a tmux session
 if os.getenv("TMUX") then
