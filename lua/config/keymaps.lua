@@ -1,19 +1,14 @@
-require "nvchad.mappings"
--- add yours here
-
-
 local map = vim.keymap.set
 
-map("n", ";", ":", { desc = "CMD enter command mode" })
-map("i", "jk", "<ESC>")
 
--- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
+-- Clear highlights on search when pressing <Esc> in normal mode
+--  See `:help hlsearch`
+map('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
 -- find and center
 map('n', 'n', 'nzzzv', opts)
 map('n', 'N', 'Nzzzv', opts)
 
-vim.api.nvim_set_option("clipboard", "unnamedplus")
 -- Dont copy to clipboard on delete in normal mode
 map('n', 'dd', '"_dd')
 map('n', 'x', '"_x')
@@ -45,16 +40,7 @@ map('n', '<C-.>', ':vertical resize -3<CR>')
 map('v', '<S-Up>', ':m -2<CR>gv=gv')
 map('v', '<S-Down>', ":m '>+1<CR>gv=gv'")
 
--- Highlight text on yank 
-vim.api.nvim_create_autocmd('TextYankPost', {
-  desc = 'Highlight when yanking (copying) text',
-  group = vim.api.nvim_create_augroup('kickstart-highlight-yank', { clear = true }),
-  callback = function()
-    vim.highlight.on_yank()
-  end,
-})
-
-vim.keymap.set('n', '<leader>ln', function()
+map('n', '<leader>ln', function()
    print('Toggle line numbers')
   vim.api.nvim_command('set number!')
   vim.api.nvim_command('set relativenumber!')
