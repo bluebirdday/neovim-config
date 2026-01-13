@@ -5,6 +5,8 @@ vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 vim.opt.smarttab = true
 
+vim.opt.termguicolors = true
+
 vim.opt.timeoutlen = 1000
 -- vim.opt.ttimeoutlen = 1000
 
@@ -16,7 +18,7 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 
 -- Enable mouse mode, can be useful for resizing splits for example!
-vim.opt.mouse = 'i'
+vim.opt.mouse = 'a'
 -- Already in the status bar
 vim.opt.showmode = false
 

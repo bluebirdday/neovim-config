@@ -9,6 +9,9 @@ map('n', '<Esc>', '<cmd>nohlsearch<CR>')
 map('n', 'n', 'nzzzv', opts)
 map('n', 'N', 'Nzzzv', opts)
 
+map('n', '<leader>[', '<cmd>bprevious<CR>')
+map('n', '<leader>]', '<cmd>bnext<CR>')
+
 -- Dont copy to clipboard on delete in normal mode
 map('n', 'dd', '"_dd')
 map('n', 'x', '"_x')
