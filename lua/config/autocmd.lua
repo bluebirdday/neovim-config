@@ -5,7 +5,3 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 	end,
 })
 
-vim.api.nvim_create_autocmd('FileType', {
-  pattern = { '*.php' },
-  callback = function() vim.treesitter.start() end,
-})

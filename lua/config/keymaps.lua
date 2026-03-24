@@ -6,8 +6,8 @@ local map = vim.keymap.set
 map('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
 -- find and center
-map('n', 'n', 'nzzzv', opts)
-map('n', 'N', 'Nzzzv', opts)
+map('n', 'n', 'nzzzv')
+map('n', 'N', 'Nzzzv')
 
 map('n', '<leader>[', '<cmd>bprevious<CR>')
 map('n', '<leader>]', '<cmd>bnext<CR>')
@@ -35,13 +35,13 @@ map('n', '<leader>k', ':m -2<CR>', { desc = 'Move line one up' })
 map('n', '<C-d>', '<C-d>zz')
 map('n', '<C-u>', '<C-u>zz')
 
--- Resize windows using control + "." & "."
+-- Resize windows using control + "," & "."
 map('n', '<C-,>', ':vertical resize +3<CR>')
 map('n', '<C-.>', ':vertical resize -3<CR>')
 
 -- Move 1 up and down in visual mode for selected lines
 map('v', '<S-Up>', ':m -2<CR>gv=gv')
-map('v', '<S-Down>', ":m '>+1<CR>gv=gv'")
+map('v', '<S-Down>', ":m '>+1<CR>gv=gv")
 
 map('n', '<leader>ln', function()
    print('Toggle line numbers')
@@ -50,11 +50,3 @@ map('n', '<leader>ln', function()
  end, {desc= 'Show line numbers'})
 
 
--- Only set this up if we're in a tmux session
-if os.getenv("TMUX") then
-  vim.keymap.set("n", "<C-h>", "<cmd>TmuxNavigateLeft<cr>")
-  vim.keymap.set("n", "<C-j>", "<cmd>TmuxNavigateDown<cr>")
-  vim.keymap.set("n", "<C-k>", "<cmd>TmuxNavigateUp<cr>")
-  vim.keymap.set("n", "<C-l>", "<cmd>TmuxNavigateRight<cr>")
-  vim.keymap.set("n", "<C-\\>", "<cmd>TmuxNavigatePrevious<cr>")
-end

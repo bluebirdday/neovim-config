@@ -1,4 +1,11 @@
-local map = vim.keymap.set
+vim.o.winborder = 'rounded'
+
+vim.o.complete = ".," -- use buffer and omifunc
+vim.o.completeopt = "fuzzy,menuone,noselect" -- add 'popup' for docs (sometimes)
+-- vim.o.autocomplete = true
+vim.o.pumheight = 7
+
+
 
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
@@ -7,7 +14,6 @@ vim.opt.smarttab = true
 
 vim.opt.termguicolors = true
 
-vim.opt.timeoutlen = 1000
 -- vim.opt.ttimeoutlen = 1000
 
 vim.api.nvim_set_option("clipboard", "unnamedplus")

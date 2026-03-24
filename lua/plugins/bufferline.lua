@@ -16,10 +16,8 @@ return
   },
   opts = {
     options = {
-      -- stylua: ignore
-      close_command = function(n) Snacks.bufdelete(n) end,
-      -- stylua: ignore
-      right_mouse_command = function(n) Snacks.bufdelete(n) end,
+      close_command = "bdelete! %d",
+      right_mouse_command = "bdelete! %d",
       diagnostics = "nvim_lsp",
       always_show_bufferline = false,
       offsets = {
