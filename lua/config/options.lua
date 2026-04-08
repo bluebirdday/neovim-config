@@ -37,6 +37,7 @@ vim.opt.undofile = true
 -- Case-insensitive searching UNLESS \C or one or more capital letters in the search term
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
+vim.opt.incsearch = true
 
 -- Keep signcolumn on by default
 vim.opt.signcolumn = 'yes'
@@ -66,5 +67,7 @@ vim.opt.cursorline = true
 
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 10
+
+vim.opt.showmatch = true
 
 vim.cmd[[colorscheme tokyonight]]
