@@ -29,7 +29,7 @@ Download latest neovim and symlink to the binary
 ```shell
 mkdir -p ~/bin
 cd ~/bin
-wget https://github.com/neovim/neovim/releases/download/v0.11.0/nvim-linux-x86_64.tar.gz
+wget https://github.com/neovim/neovim/releases/download/v0.12.1/nvim-linux-x86_64.tar.gz
 tar xzvf nvim-linux-x86_64.tar.gz
 mkdir -p /data/web/.local/bin
 ln -s /data/web/bin/nvim-linux-x86_64/bin/nvim /data/web/.local/bin/nvim
