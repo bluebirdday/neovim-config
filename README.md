@@ -33,6 +33,7 @@ wget https://github.com/neovim/neovim/releases/download/v0.11.0/nvim-linux-x86_6
 tar xzvf nvim-linux-x86_64.tar.gz
 mkdir -p /data/web/.local/bin
 ln -s /data/web/bin/nvim-linux-x86_64/bin/nvim /data/web/.local/bin/nvim
+rm nvim-linux-x86_64.tar.gz
 ```
 
 
