@@ -3,6 +3,15 @@
 ## Requirements
 neovim >=0.11, this can be checked with: `nvim --version`
 
+## LSP servers (optional)
+Autocomplete works out of the box via buffer words. Install any of the following for language-specific autocomplete:
+
+| Language | Binary | Install |
+|----------|--------|---------|
+| Lua | `lua-language-server` | `brew install lua-language-server` |
+| PHP | `phpactor` | `composer global require phpactor/phpactor` |
+| JavaScript / TypeScript | `typescript-language-server` | `npm install -g typescript-language-server typescript` |
+
 ## Installation
 Just clone the repo
 ```
@@ -29,7 +38,7 @@ Download latest neovim and symlink to the binary
 ```shell
 mkdir -p ~/bin
 cd ~/bin
-wget https://github.com/neovim/neovim/releases/download/v0.11.0/nvim-linux-x86_64.tar.gz
+wget https://github.com/neovim/neovim/releases/download/v0.12.1/nvim-linux-x86_64.tar.gz
 tar xzvf nvim-linux-x86_64.tar.gz
 mkdir -p /data/web/.local/bin
 ln -s /data/web/bin/nvim-linux-x86_64/bin/nvim /data/web/.local/bin/nvim

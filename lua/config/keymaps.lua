@@ -1,9 +1,21 @@
 local map = vim.keymap.set
 
+-- Typo aliases
+vim.cmd('command! Q q')
+vim.cmd('command! Qa qa')
+vim.cmd('command! W w')
+vim.cmd('command! Wq wq')
+vim.cmd('command! WQ wq')
+
 
 -- Clear highlights on search when pressing <Esc> in normal mode
 --  See `:help hlsearch`
 map('n', '<Esc>', '<cmd>nohlsearch<CR>')
+
+-- Terminal sends \033[4~ for End key, which Neovim reads as <Select> — remap it
+map({'i', 'n', 'v'}, '<Select>', '<End>')
+-- Terminal sends \033[1~ for Home key, which Neovim reads as <Find> — remap it
+map({'i', 'n', 'v'}, '<Find>', '<Home>')
 
 -- find and center
 map('n', 'n', 'nzzzv')
@@ -35,7 +47,7 @@ map('v', '<A-Up>', ':m <-2<CR>gv=gv', {desc = 'Move selection up'})
 
 -- Indent in visual mode with > and <, dont clear selection after
 map('v', '<', '<gv', {desc = 'Indent left and reselect' })
-map('v', '>', '>gv', {desc = 'Indent righ and reselect' })
+map('v', '>', '>gv', {desc = 'Indent right and reselect' })
 
 -- move line one down
 map('n', '<leader><Down>', ':m +1<CR>', { desc = 'Move line one down'})
@@ -59,8 +71,8 @@ map('n', '<C-.>', ':vertical resize -3<CR>')
 
 map('n', '<leader>ln', function()
    print('Toggle line numbers')
-  vim.api.nvim_command('set number!')
-  vim.api.nvim_command('set relativenumber!')
+  vim.cmd('set number!')
+  vim.cmd('set relativenumber!')
  end, {desc= 'Show line numbers'})
 
 

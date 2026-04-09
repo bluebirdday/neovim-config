@@ -16,7 +16,7 @@ vim.opt.termguicolors = true
 
 -- vim.opt.ttimeoutlen = 1000
 
-vim.api.nvim_set_option("clipboard", "unnamedplus")
+vim.opt.clipboard = "unnamedplus"
 
 vim.g.have_nerd_font = true
 
@@ -31,8 +31,9 @@ vim.opt.showmode = false
 -- Enable break indent
 vim.opt.breakindent = true
 
--- Save undo history
+-- Save undo history to a central directory
 vim.opt.undofile = true
+vim.opt.undodir = vim.fn.stdpath('data') .. '/undodir'
 
 -- Case-insensitive searching UNLESS \C or one or more capital letters in the search term
 vim.opt.ignorecase = true
