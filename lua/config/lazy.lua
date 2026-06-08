@@ -21,6 +21,10 @@ vim.opt.rtp:prepend(lazypath)
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
+-- Disable netrw in favour of nvim-tree (must be set before nvim-tree loads).
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
 -- Setup lazy.nvim
 require("lazy").setup({
   spec = {

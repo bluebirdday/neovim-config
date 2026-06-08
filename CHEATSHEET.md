@@ -48,6 +48,7 @@
 | `<leader>fg` | Live grep |
 | `<leader>fb` | Find buffers |
 | `<leader>fh` | Help tags |
+| `<leader>fk` | Search all keymaps |
 
 ---
 
@@ -55,15 +56,16 @@
 
 | Key | Action |
 |-----|--------|
-| `Alt+j` / `Alt+↓` | Move line down |
-| `Alt+k` / `Alt+↑` | Move line up |
-| `<leader>j` / `<leader>↓` | Move line down (1 step) |
-| `<leader>k` / `<leader>↑` | Move line up (1 step) |
+| `y` / `Y` | Yank (→ system clipboard) |
+| `Alt+j` / `Alt+↓` | Move line down (re-indents) |
+| `Alt+k` / `Alt+↑` | Move line up (re-indents) |
 | `>` (visual) | Indent right (keeps selection) |
 | `<` (visual) | Indent left (keeps selection) |
 | `Alt+j/k` (visual) | Move selection up / down |
 
-> Note: `d`, `c`, `x`, `dd`, `diw`, `ciw` delete to void register — clipboard is not polluted.
+> Clipboard: only **yank** (`y`/`Y`) goes to the system clipboard. `d`, `c`, `x` use
+> Vim's own registers — they don't touch the system clipboard, but are still
+> pasteable in-buffer with `p`. To paste *from* the system clipboard, use `"+p`.
 
 ---
 
@@ -71,8 +73,23 @@
 
 | Key | Action |
 |-----|--------|
-| `Ctrl+,` | Vertical resize +3 |
-| `Ctrl+.` | Vertical resize -3 |
+| `Alt+,` | Vertical resize +3 (hold Alt, tap to repeat) |
+| `Alt+.` | Vertical resize -3 (hold Alt, tap to repeat) |
+
+---
+
+## LSP / Code
+
+| Key | Action |
+|-----|--------|
+| `gd` | Go to definition |
+| `<leader>d` | Show diagnostic (float) |
+| `K` | Hover docs *(Neovim default)* |
+| `grn` | Rename symbol *(Neovim default)* |
+| `gra` | Code action *(Neovim default)* |
+| `grr` | References *(Neovim default)* |
+| `gri` | Implementation *(Neovim default)* |
+| `[d` / `]d` | Previous / next diagnostic *(Neovim default)* |
 
 ---
 

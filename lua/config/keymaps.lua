@@ -21,8 +21,8 @@ map({'i', 'n', 'v'}, '<Find>', '<Home>')
 map('n', 'n', 'nzzzv')
 map('n', 'N', 'Nzzzv')
 
-map('n', '<leader>[', '<cmd>bprevious<CR>')
-map('n', '<leader>]', '<cmd>bnext<CR>')
+map('n', '<leader>[', '<cmd>bprevious<CR>', { desc = 'Previous buffer' })
+map('n', '<leader>]', '<cmd>bnext<CR>', { desc = 'Next buffer' })
 
 -- Yank goes to the system clipboard (+), but delete/change/x stay on Vim's own
 -- registers — so deletes don't clobber the clipboard, yet are still pasteable
@@ -31,7 +31,7 @@ map({ 'n', 'v' }, 'y', '"+y', { desc = 'Yank to system clipboard' })
 map('n', 'Y', '"+y$', { desc = 'Yank to end of line to clipboard' })
 
 -- Toggle word wrap
-map('n', '<leader>lw', '<cmd>set wrap!<CR>')
+map('n', '<leader>lw', '<cmd>set wrap!<CR>', { desc = 'Toggle word wrap' })
 
 map('n', '<A-j>', ':m .+1<CR>==', {desc = 'Move line down'})
 map('n', '<A-Down>', ':m .+1<CR>==', {desc = 'Move line down'})
@@ -47,21 +47,16 @@ map('v', '<A-Up>', ':m <-2<CR>gv=gv', {desc = 'Move selection up'})
 map('v', '<', '<gv', {desc = 'Indent left and reselect' })
 map('v', '>', '>gv', {desc = 'Indent right and reselect' })
 
--- move line one down
-map('n', '<leader><Down>', ':m +1<CR>', { desc = 'Move line one down'})
-map('n', '<leader>j', ':m +1<CR>', { desc = 'Move line one down' })
-
--- move line up
-map('n', '<leader><Up>', ':m -2<CR>', { desc = 'Move line one up' })
-map('n', '<leader>k', ':m -2<CR>', { desc = 'Move line one up' })
+-- (line moving is handled by the <A-j>/<A-k> maps above, which also re-indent)
 
 -- On page up and page down, center screen
 map('n', '<C-d>', '<C-d>zz')
 map('n', '<C-u>', '<C-u>zz')
 
--- Resize windows using control + "," & "."
-map('n', '<C-,>', ':vertical resize +3<CR>')
-map('n', '<C-.>', ':vertical resize -3<CR>')
+-- Resize splits — hold Alt and tap , / . repeatedly. (Alt works in this terminal;
+-- Ctrl+punctuation isn't a distinct keycode in most terminals, so <C-,> wouldn't fire.)
+map('n', '<A-,>', '<cmd>vertical resize +3<CR>', { desc = 'Grow split width' })
+map('n', '<A-.>', '<cmd>vertical resize -3<CR>', { desc = 'Shrink split width' })
 
 -- Move 1 up and down in visual mode for selected lines
 -- map('v', '<S-Up>', ':m -2<CR>gv=gv')
