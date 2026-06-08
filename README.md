@@ -101,8 +101,9 @@ ln -sf ~/bin/nvim-linux-x86_64/bin/nvim ~/.local/bin/nvim
 - **Plugins** (via lazy.nvim): lualine, bufferline, nvim-tree, telescope (+ fzf),
   treesitter, render-markdown, which-key, mini.nvim (completion + snippets),
   tokyonight colorscheme, tmux-navigator.
-- **LSP**: enables `lua_ls`, `phpactor`, and `ts_ls` when their binaries are present
-  (adds `gd`, `<leader>d`, on top of Neovim's built-in 0.11+ LSP keymaps).
+- **LSP**: enables the `luals`, `php`, and `ts_ls` configs in `lsp/` (lua-language-server,
+  phpactor, typescript-language-server) when their binaries are present — adds `gd`,
+  `<leader>d`, on top of Neovim's built-in 0.11+ LSP keymaps.
 - **Clipboard**: yank (`y`/`Y`) goes to the system clipboard; delete/change (`d`/`c`/`x`)
   stay in Vim's own registers (no clipboard pollution, still pasteable with `p`).
   Over SSH this uses OSC 52, so yanks reach your **local** machine's clipboard.

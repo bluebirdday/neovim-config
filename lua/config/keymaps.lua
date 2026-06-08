@@ -63,9 +63,8 @@ map('n', '<A-.>', '<cmd>vertical resize -3<CR>', { desc = 'Shrink split width' }
 -- map('v', '<S-Down>', ":m '>+1<CR>gv=gv")
 
 map('n', '<leader>ln', function()
-   print('Toggle line numbers')
   vim.cmd('set number!')
   vim.cmd('set relativenumber!')
- end, {desc= 'Show line numbers'})
+end, { desc = 'Toggle line numbers' })
 
 
