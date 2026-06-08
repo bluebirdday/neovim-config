@@ -11,5 +11,7 @@ return {
 	vim.keymap.set('n', '<leader>fg', telescope.live_grep, { desc = 'Telescope live grep' })
 	vim.keymap.set('n', '<leader>fb', telescope.buffers, { desc = 'Telescope buffers' })
 	vim.keymap.set('n', '<leader>fh', telescope.help_tags, { desc = 'Telescope help tags' })
+	-- Load the compiled fzf sorter (built via `make` above)
+	require('telescope').load_extension('fzf')
     end
 }

@@ -16,7 +16,10 @@ vim.opt.termguicolors = true
 
 -- vim.opt.ttimeoutlen = 1000
 
-vim.opt.clipboard = "unnamedplus"
+-- NOTE: we deliberately do NOT set clipboard = "unnamedplus".
+-- That would route every delete/change to the system clipboard too. Instead the
+-- `y` mapping in keymaps.lua sends yanks to the `+` register, while d/c/x stay on
+-- Vim's own registers (still pasteable in-buffer, but no clipboard pollution).
 
 -- Over SSH (e.g. managed hosting) there's no pbcopy/xclip/wl-copy, so the `+`
 -- register goes nowhere. Route the clipboard through OSC 52 instead, which sends

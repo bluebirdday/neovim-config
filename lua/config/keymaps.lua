@@ -24,13 +24,11 @@ map('n', 'N', 'Nzzzv')
 map('n', '<leader>[', '<cmd>bprevious<CR>')
 map('n', '<leader>]', '<cmd>bnext<CR>')
 
--- Dont copy to clipboard on delete in normal mode
-map('n', 'dd', '"_dd')
-map('n', 'x', '"_x')
-map('n', 'd', '"_d')
-map('n', 'c', '"_c')
-map('n', 'diw', '"_diw')
-map('n', 'ciw', '"_ciw')
+-- Yank goes to the system clipboard (+), but delete/change/x stay on Vim's own
+-- registers — so deletes don't clobber the clipboard, yet are still pasteable
+-- in-buffer with p. See the clipboard note in options.lua.
+map({ 'n', 'v' }, 'y', '"+y', { desc = 'Yank to system clipboard' })
+map('n', 'Y', '"+y$', { desc = 'Yank to end of line to clipboard' })
 
 -- Toggle word wrap
 map('n', '<leader>lw', '<cmd>set wrap!<CR>')
