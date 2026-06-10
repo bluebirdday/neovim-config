@@ -109,4 +109,5 @@ ln -sf ~/bin/nvim-linux-x86_64/bin/nvim ~/.local/bin/nvim
   Over SSH this uses OSC 52, so yanks reach your **local** machine's clipboard.
 - **Keymaps & options**: see [CHEATSHEET.md](CHEATSHEET.md) for the full keybinding list.
 - Mouse enabled in all modes; relative line numbers; persistent undo; treesitter
-  syntax highlighting for lua, php, js/ts, html, css, xml, yaml, json, twig, markdown.
+  syntax highlighting for lua, php, js/ts, html, css, xml, yaml, json, twig, markdown,
+  and shell scripts (bash; `.zsh` files use the bash parser too).

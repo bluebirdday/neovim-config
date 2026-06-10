@@ -19,8 +19,12 @@ return {
         'lua', 'php', 'php_only', 'javascript', 'typescript', 'tsx',
         'markdown', 'markdown_inline',
         'html', 'css', 'xml', 'yaml', 'json', 'twig',
+        'bash', -- covers .sh/.bash (filetype `sh`) and bash-shebang scripts
       })
     end
+
+    -- zsh has no dedicated parser; use the bash parser for `.zsh` files too.
+    pcall(vim.treesitter.language.register, 'bash', 'zsh')
 
     -- Highlighting is started per buffer; pcall guards filetypes with no parser yet.
     vim.api.nvim_create_autocmd('FileType', {
