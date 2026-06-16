@@ -4,13 +4,10 @@ return {
         -- Snippet engine (expands LSP snippets and user-defined ones)
         require('mini.snippets').setup()
 
-        -- Completion: LSP + buffer words, auto-popup, works without LSP too
-        require('mini.completion').setup()
+        -- Auto-close / auto-delete pairs: () [] {} "" '' ``
+        require('mini.pairs').setup()
 
-        -- Tab / Shift-Tab navigate the completion popup when it's open
-        -- (first Tab selects the first item; otherwise Tab inserts a tab).
-        -- Confirm the selected item with Enter or Ctrl-y.
-        vim.keymap.set('i', '<Tab>',   [[pumvisible() ? "\<C-n>" : "\<Tab>"]],   { expr = true })
-        vim.keymap.set('i', '<S-Tab>', [[pumvisible() ? "\<C-p>" : "\<S-Tab>"]], { expr = true })
+        -- Completion is handled by blink.cmp on this branch (see plugins/blink.lua).
+        -- mini.snippets above stays as blink's snippet source (mini_snippets preset).
     end,
 }
