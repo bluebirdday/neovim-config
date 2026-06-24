@@ -92,4 +92,4 @@ vim.opt.scrolloff = 10
 
 vim.opt.showmatch = true
 
-vim.cmd[[colorscheme jb]]
+vim.cmd[[colorscheme onedark]]

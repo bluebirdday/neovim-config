@@ -4,7 +4,7 @@ return {
   lazy = true,
   config = function()
     require('onedark').setup {
-      style = 'darker'
+      style = 'cool'
     }
     require('onedark').load()
   end
